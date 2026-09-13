@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Privacy Policy for the HomeOps personal-use application.">
+    <title>Privacy Policy — HomeOps</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header>
+      <nav class="shell" aria-label="Primary navigation">
+        <a class="brand" href="/"><span class="mark" aria-hidden="true">H</span>HomeOps</a>
+        <div class="nav-links">
+          <a href="/">Overview</a>
+          <a href="/privacy.html" aria-current="page">Privacy</a>
+          <a href="/terms.html">Terms</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="prose">
+      <p class="eyebrow">HomeOps</p>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Effective: 13 September 2026</p>
+
+      <h2>1. Scope and operator</h2>
+      <p>
+        HomeOps is a private, personal-use household operations assistant operated
+        by its project owner. It is not offered to the general public. Questions
+        about this policy can be submitted through the
+        <a href="https://github.com/Dmitryvoit/homeops-site">HomeOps site repository</a>.
+      </p>
+
+      <h2>2. Google user data accessed</h2>
+      <p>With the user's explicit OAuth authorization, HomeOps may access:</p>
+      <ul>
+        <li>Gmail message metadata and bounded message content using read-only access;</li>
+        <li>Google Calendar lists and events using read-only access; and</li>
+        <li>events owned by the user for an explicitly approved create or update operation.</li>
+      </ul>
+      <p>
+        HomeOps does not use Gmail permission to send, delete, label, or modify
+        messages. It does not delete Google Calendar events.
+      </p>
+
+      <h2>3. How Google user data is used</h2>
+      <p>Google user data is used only to:</p>
+      <ul>
+        <li>identify possible household obligations, deadlines, and event proposals;</li>
+        <li>compare proposed events with existing calendar state;</li>
+        <li>show the owner a reviewable summary; and</li>
+        <li>perform and verify a calendar change that the owner explicitly approved.</li>
+      </ul>
+      <p>
+        Google user data is not used for advertising, credit decisions, surveillance,
+        or sale to third parties.
+      </p>
+
+      <h2>4. Processing and disclosure</h2>
+      <p>
+        The authoritative HomeOps database runs locally on the owner's computer.
+        HomeOps may transmit only the data needed for a feature to the following
+        processors:
+      </p>
+      <ul>
+        <li><strong>Google APIs</strong>, to read authorized Gmail and Calendar data and to perform an approved Calendar operation;</li>
+        <li><strong>OpenAI API</strong>, to classify bounded, normalized, untrusted email or attachment-derived text and produce a non-authoritative proposal; and</li>
+        <li><strong>Telegram Bot API</strong>, to deliver operational summaries and receive review choices in the owner's private chat.</li>
+      </ul>
+      <p>
+        HomeOps does not grant these processors authority to approve household
+        actions. It does not transfer Google user data to data brokers or sell it.
+      </p>
+
+      <h2>5. Storage and security</h2>
+      <ul>
+        <li>Operational records are stored in a local PostgreSQL database.</li>
+        <li>Google OAuth tokens are encrypted for the current Windows user and stored outside the source repository.</li>
+        <li>Database recovery points are encrypted before being written to backup storage.</li>
+        <li>Incoming email and derived content are treated as untrusted evidence and cannot directly authorize actions.</li>
+        <li>Calendar writes require a separate least-privilege token, an exact action request, local Windows Hello confirmation, and post-write verification.</li>
+      </ul>
+
+      <h2>6. Retention</h2>
+      <p>
+        Eligible Gmail content is compacted after 90 days by removing stored titles,
+        summaries, message bodies, and derived attachment content. Minimal identifiers,
+        timestamps, provenance, and audit records may be retained to prevent duplicate
+        processing and preserve system integrity. Content connected to an unresolved
+        obligation is retained until it is safe to compact. Encrypted recovery points
+        retain older state only until their normal bounded backup retention expires.
+      </p>
+
+      <h2>7. User control and deletion</h2>
+      <p>
+        The user can revoke HomeOps access at any time from the Google Account
+        permissions page. The project owner can also delete the local OAuth token
+        files, local database records, and encrypted recovery points. Revocation
+        prevents new access but does not itself erase already stored local records.
+      </p>
+
+      <h2>8. Google API Services User Data Policy</h2>
+      <p>
+        HomeOps' use and transfer of information received from Google APIs adheres
+        to the
+        <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+        including its Limited Use requirements.
+      </p>
+
+      <h2>9. Changes</h2>
+      <p>
+        Material changes to this policy will be published on this page with a new
+        effective date before the changed processing is used.
+      </p>
+    </main>
+
+    <footer>
+      <div class="shell footer-row">
+        <span>© 2026 HomeOps</span>
+        <div class="footer-links">
+          <a href="/">Overview</a>
+          <a href="/terms.html">Terms</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

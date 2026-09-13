@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="HomeOps is a private, local-first household operations assistant.">
+    <title>HomeOps — Private household operations assistant</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header>
+      <nav class="shell" aria-label="Primary navigation">
+        <a class="brand" href="/"><span class="mark" aria-hidden="true">H</span>HomeOps</a>
+        <div class="nav-links">
+          <a href="#permissions">Permissions</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero shell">
+        <div>
+          <p class="eyebrow">Private · local-first · human-controlled</p>
+          <h1>Household operations, without surrendering control.</h1>
+          <p class="lead">
+            HomeOps helps its owner notice obligations in email, compare proposed
+            events with Google Calendar, and review the next action through a
+            private Telegram interface.
+          </p>
+        </div>
+        <aside class="trust-card" aria-label="Availability">
+          <strong>Personal-use application</strong>
+          <p>
+            HomeOps is not offered as a public service. Access is limited to the
+            project owner and explicitly approved test accounts.
+          </p>
+        </aside>
+      </section>
+
+      <section class="section">
+        <div class="shell">
+          <p class="eyebrow">Operating model</p>
+          <h2>The computer remains the authority.</h2>
+          <p class="section-intro">
+            The authoritative database and security controls run on the owner's
+            Windows computer. Incoming content is treated as untrusted evidence,
+            and proposed actions remain pending until policy and human approval
+            requirements are satisfied.
+          </p>
+          <div class="grid">
+            <article class="card">
+              <h3>Read narrowly</h3>
+              <p>Email and calendar access use separate least-privilege OAuth permissions.</p>
+            </article>
+            <article class="card">
+              <h3>Review explicitly</h3>
+              <p>HomeOps presents proposals for review instead of silently applying them.</p>
+            </article>
+            <article class="card">
+              <h3>Verify changes</h3>
+              <p>Calendar writes require an exact request, local confirmation, and a read-back check.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="permissions">
+        <div class="shell">
+          <p class="eyebrow">Google permissions</p>
+          <h2>Why HomeOps requests access</h2>
+          <div class="permission">
+            <h3>Gmail read-only</h3>
+            <p>
+              Reads authorized mailbox content to identify possible household tasks
+              and deadlines. HomeOps cannot send, delete, or modify Gmail messages.
+            </p>
+          </div>
+          <div class="permission">
+            <h3>Calendar read-only</h3>
+            <p>
+              Compares a proposed event with existing calendar state so duplicate
+              or already-completed work can be suppressed.
+            </p>
+          </div>
+          <div class="permission">
+            <h3>Owned calendar events</h3>
+            <p>
+              Creates or updates only events owned by the authorizing user, after
+              explicit approval and local Windows Hello confirmation. HomeOps does
+              not delete calendar events.
+            </p>
+          </div>
+          <div class="notice">
+            <p>
+              For details about processing, retention, external providers, and
+              deletion controls, read the <a href="/privacy.html">Privacy Policy</a>.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="shell footer-row">
+        <span>© 2026 HomeOps</span>
+        <div class="footer-links">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="https://github.com/Dmitryvoit/homeops-site">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
